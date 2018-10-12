@@ -6,8 +6,9 @@ Convert bash aliases into eshell ones.
 
 # Installation
 
-Download and copy load-bash-shell-aliases.el into .emacs.d/lisp directory.
-Add the following elisp code to your lisp config:
+1. Download and copy **load-bash-shell-aliases.el** into
+   **.emacs.d/lisp** directory.
+2. Add the following elisp code to your lisp config:
 
 ``` elisp
 ;; Tell Emacs where is your personal elisp lib directory
@@ -18,5 +19,5 @@ Add the following elisp code to your lisp config:
 (load-library "load-bash-shell-aliases")
 ```
 
-Call lbsa/load-bash-alias-into-eshell interactive function to convert
-bash aliases into eshell ones.
+3. Call lbsa/load-bash-alias-into-eshell interactive function to
+   convert bash aliases into eshell ones.
