@@ -4,7 +4,7 @@
 
 Convert bash aliases into eshell ones.
 
-# Installation
+## Installation
 
 1. Download and copy **load-bash-shell-aliases.el** into
    **.emacs.d/lisp** directory.
