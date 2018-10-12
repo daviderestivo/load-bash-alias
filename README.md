@@ -23,4 +23,4 @@ Convert bash aliases into eshell ones.
    convert bash aliases into eshell ones.
 
 ## Credits
-The original ideas for this package has been taken from [[Skye](http://skyefreeman.io/programming/emacs/2017/08/03/converting_bash_config_to_eshell.html)]. The original elisp code can be found [[here](https://github.com/skyefreeman/.emacs.d/blob/master/custom/bash-to-eshell-aliases.el)]
+The original ideas for this package has been taken from [Skye](http://skyefreeman.io/programming/emacs/2017/08/03/converting_bash_config_to_eshell.html). The original elisp code can be found [here](https://github.com/skyefreeman/.emacs.d/blob/master/custom/bash-to-eshell-aliases.el).
