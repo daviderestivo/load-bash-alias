@@ -1,0 +1,55 @@
+#--- Emacs ---
+*~
+*.elc
+.last-package-update-day
+.mc-lists.el
+.nrepl-port
+.org-id-locations
+auto-save-list/
+bookmarks
+elisp-objects/
+elpa/
+eshell/alias
+eshell/history
+eshell/lastdir
+hgs-cache
+personal.el
+places
+projectile-bookmarks.eld
+recentf
+todo.org
+tramp
+url/
+# Uncomment the below if you want to ignore backup (autosave) files
+#[#]*[#]
+
+#--- Compiled files ---
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+#--- Packed files ---
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+#--- Logs and databases ---
+*.log
+*.sql
+*.sqlite
+
+#--- OS junk ---
+.DS_Store
+__MACOSX/
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
