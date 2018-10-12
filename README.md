@@ -21,3 +21,6 @@ Convert bash aliases into eshell ones.
 
 3. Call lbsa/load-bash-alias-into-eshell interactive function to
    convert bash aliases into eshell ones.
+
+## Credits
+The original ideas for this package has been taken from [[Skye](http://skyefreeman.io/programming/emacs/2017/08/03/converting_bash_config_to_eshell.html)]. The original elisp code can be found [[here](https://github.com/skyefreeman/.emacs.d/blob/master/custom/bash-to-eshell-aliases.el)]
