@@ -6,7 +6,7 @@
 ;; Maintainer: Davide Restivo <davide.restivo@yahoo.it>
 ;; Version: 0.0.3
 ;; URL: https://github.com/daviderestivo/load-bash-shell-aliases
-;; Package-Requires: ((emacs "24.1"))
+;; Package-Requires: ((emacs "24.1") (seq "2.16"))
 ;; Keywords: emacs bash eshell alias
 
 ;; This program is free software; you can redistribute it and/or
