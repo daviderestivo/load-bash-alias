@@ -88,5 +88,5 @@ list of alias commands, and inserts them as eshell aliases."
             (eshell-send-input))))
     (message "The Bash file set on load-bash-alias-bashrc-file does not exists!")))
 
-(provide 'load-bash-alias-load-bash-aliases-into-eshell)
+(provide 'load-bash-alias)
 ;;; load-bash-alias.el ends here
