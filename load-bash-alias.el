@@ -35,7 +35,7 @@
 
 (defgroup load-bash-alias nil
   "Convert bash aliases into eshell ones"
-  :group 'emacs)
+  :group 'eshell)
 
 (defcustom load-bash-alias-bashrc-file "~/.bashrc"
   "Bash alias file."
