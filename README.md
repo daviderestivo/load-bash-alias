@@ -1,6 +1,7 @@
 # load-bash-alias
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![MELPA](https://melpa.org/packages/load-bash-alias-badge.svg)](https://melpa.org/#/load-bash-alias)
 
 Convert bash aliases into eshell ones.
 
