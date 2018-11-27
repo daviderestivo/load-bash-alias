@@ -5,7 +5,7 @@
 
 Convert bash aliases into eshell ones.
 
-## Installation
+## Manual Installation
 
 1. Download and copy **load-bash-alias.el** into
    **.emacs.d/lisp** directory.
@@ -25,6 +25,18 @@ Convert bash aliases into eshell ones.
 
 ```
 M-x load-bash-alias-load-bash-alias-into-eshell
+```
+
+## Install from Melpa
+
+Add the following elisp snippet to your init.el:
+
+``` elisp
+(use-package load-bash-alias
+  :ensure t
+  :config
+  (setq load-bash-alias-bashrc-file "~/.bashrc")
+  (setq load-bash-alias-exclude-aliases-regexp "^alias magit\\|^alias oc"))
 ```
 
 ## Customization
