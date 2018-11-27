@@ -5,8 +5,8 @@
 
 Convert bash aliases into eshell ones.
 
-## Manual Installation
-
+## Installation
+### Manual
 1. Download and copy **load-bash-alias.el** into
    **.emacs.d/lisp** directory.
 2. Add the following elisp code to your Emacs config:
@@ -27,8 +27,7 @@ Convert bash aliases into eshell ones.
 M-x load-bash-alias-load-bash-alias-into-eshell
 ```
 
-## Install from Melpa
-
+### Melpa
 Add the following elisp snippet to your init.el:
 
 ``` elisp
@@ -40,7 +39,6 @@ Add the following elisp snippet to your init.el:
 ```
 
 ## Customization
-
 The location of your barshrc file can be customized by setting the
 value of **load-bash-alias-bashrc-file** variable:
 
