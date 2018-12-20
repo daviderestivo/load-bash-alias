@@ -1,6 +1,6 @@
 ;;; load-bash-alias.el --- Convert bash aliases into eshell ones -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2018 Davide Restivo
+;; Copyright (C) 2018-2019 Davide Restivo
 
 ;; Author: Davide Restivo <davide.restivo@yahoo.it>
 ;; Maintainer: Davide Restivo <davide.restivo@yahoo.it>
