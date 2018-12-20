@@ -91,10 +91,9 @@ list of alias commands, and inserts them as eshell aliases."
 ;; `load-bash-alias-load-bash-aliases-into-eshell' has been marked as
 ;; obsolete and might be removed in the near future. Please use
 ;; `load-bash-alias-into-eshell' instead.
-(defalias 'load-bash-alias-load-bash-aliases-into-eshell
-  'load-bash-alias-into-eshell)
-(make-obsolete 'load-bash-alias-load-bash-aliases-into-eshell
-               'load-bash-alias-into-eshell "2018-12-19")
+(define-obsolete-function-alias
+  'load-bash-alias-load-bash-aliases-into-eshell
+  'load-bash-alias-into-eshell "2018-12-19")
 
 (provide 'load-bash-alias)
 ;;; load-bash-alias.el ends here
