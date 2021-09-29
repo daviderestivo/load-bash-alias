@@ -82,9 +82,12 @@ list of alias commands, and inserts them as eshell aliases."
           ;; After multiple withespaces and tabs into single
           ;; withespace convert a bash alias into an eshell one by
           ;; removing the "=" sign.
-          (let ((trimmed (replace-regexp-in-string "=\\|[ \t]+" " " element)))
+          (let* ((trimmed (replace-regexp-in-string "=\\|[ \t]+" " " element))
+                 (all-but-last-char (substring trimmed 0 -1))
+                 (last-char (substring trimmed -1 nil))
+                 (enhanced (concat all-but-last-char " $*" last-char)))
             (goto-char (point-max))
-            (insert trimmed)
+            (insert enhanced)
             (eshell-send-input))))
     (message "The Bash file set on load-bash-alias-bashrc-file does not exists!")))
 
