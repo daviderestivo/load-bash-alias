@@ -7,8 +7,7 @@ Convert bash aliases into eshell ones.
 
 ## Installation
 ### Manual
-1. Download and copy **load-bash-alias.el** into
-   **.emacs.d/lisp** directory.
+1. Download and copy `load-bash-alias.el` into `~/.emacs.d/lisp` directory.
 2. Add the following elisp code to your Emacs config:
 
 ``` elisp
@@ -40,19 +39,19 @@ Add the following elisp snippet to your init.el:
 
 ## Customization
 The location of your barshrc file can be customized by setting the
-value of **load-bash-alias-bashrc-file** variable:
+value of `load-bash-alias-bashrc-file` variable:
 
 ``` elisp
 (setq load-bash-alias-bashrc-file "~/.bashrc")
 ```
 
-In case you want to add more alias files please add them to **bash-alias-additional-aliases-files**. For example:
+In case you want to add more alias files please add them to `bash-alias-additional-aliases-files`. For example:
 
 ``` elisp
 (setq load-bash-alias-additional-aliases-files '("~/.dotfiles/bashrc_addons"))
 ```
 
-In addition it's possible to exclude certain bash aliases to be converted into eshell ones simply setting **load-bash-alias-exclude-aliases-regexp**:
+In addition it's possible to exclude certain bash aliases to be converted into eshell ones simply setting `load-bash-alias-exclude-aliases-regexp`:
 
 ``` elisp
 (setq load-bash-alias-exclude-aliases-regexp "^alias magit\\|^alias oc")
