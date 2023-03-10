@@ -38,8 +38,13 @@
   :group 'eshell)
 
 (defcustom load-bash-alias-bashrc-file "~/.bashrc"
-  "Bash alias file."
+  "Bash aliases file."
   :type 'string)
+
+(defcustom load-bash-alias-additional-aliases-files nil
+  "Additional bash aliases files list. For example:
+   (\"~/.bashrc_personal\")"
+  :type 'list)
 
 (defcustom load-bash-alias-exclude-aliases-regexp "^alias magit\\|^alias oc"
   "Regexp to exclude Bash aliases to be converted into eshell ones."
@@ -73,23 +78,24 @@
 Take the file specified in `load-bash-alias-bashrc-file', trims it to a
 list of alias commands, and inserts them as eshell aliases."
   (interactive)
-  (if (file-exists-p load-bash-alias-bashrc-file)
-      (progn
-        (eshell)
-        (dolist
-            (element
-             (load-bash-alias-extract-bash-aliases (load-bash-alias-read-bash-file load-bash-alias-bashrc-file)))
-          ;; After multiple withespaces and tabs into single
-          ;; withespace convert a bash alias into an eshell one by
-          ;; removing the "=" sign.
-          (let* ((trimmed (replace-regexp-in-string "=\\|[ \t]+" " " element))
-                 (all-but-last-char (substring trimmed 0 -1))
-                 (last-char (substring trimmed -1 nil))
-                 (enhanced (concat all-but-last-char " $*" last-char)))
-            (goto-char (point-max))
-            (insert enhanced)
-            (eshell-send-input))))
-    (message "The Bash file set on load-bash-alias-bashrc-file does not exists!")))
+  (dolist (file (append (list load-bash-alias-bashrc-file) load-bash-alias-additional-aliases-files))
+    (if (file-exists-p file)
+        (progn
+          (eshell)
+          (dolist
+              (element
+               (load-bash-alias-extract-bash-aliases (load-bash-alias-read-bash-file load-bash-alias-bashrc-file)))
+            ;; First collaps multiple whitespaces and tabs into a single
+            ;; whitespace then convert a bash alias into an eshell one
+            ;; by removing the "=" sign.
+            (let* ((trimmed (replace-regexp-in-string "=\\|[ \t]+" " " element))
+                   (all-but-last-char (substring trimmed 0 -1))
+                   (last-char (substring trimmed -1 nil))
+                   (enhanced (concat all-but-last-char " $*" last-char)))
+              (goto-char (point-max))
+              (insert enhanced)
+              (eshell-send-input))))
+      (message (concat "The aliases file: " file " does not exists!")))))
 
 ;; `load-bash-alias-load-bash-aliases-into-eshell' has been marked as
 ;; obsolete and might be removed in the near future. Please use

@@ -46,6 +46,12 @@ value of **load-bash-alias-bashrc-file** variable:
 (setq load-bash-alias-bashrc-file "~/.bashrc")
 ```
 
+In case you want to add more alias files please add them to **bash-alias-additional-aliases-files**. For example:
+
+``` elisp
+(setq load-bash-alias-additional-aliases-files '("~/.dotfiles/bashrc_addons"))
+```
+
 In addition it's possible to exclude certain bash aliases to be converted into eshell ones simply setting **load-bash-alias-exclude-aliases-regexp**:
 
 ``` elisp
