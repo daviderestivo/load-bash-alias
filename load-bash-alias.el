@@ -84,7 +84,7 @@ list of alias commands, and inserts them as eshell aliases."
           (eshell)
           (dolist
               (element
-               (load-bash-alias-extract-bash-aliases (load-bash-alias-read-bash-file load-bash-alias-bashrc-file)))
+               (load-bash-alias-extract-bash-aliases (load-bash-alias-read-bash-file file)))
             ;; First collaps multiple whitespaces and tabs into a single
             ;; whitespace then convert a bash alias into an eshell one
             ;; by removing the "=" sign.
