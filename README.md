@@ -7,8 +7,7 @@ Convert bash aliases into eshell ones.
 
 ## Installation
 ### Manual
-1. Download and copy `load-bash-alias.el into
-   `~/.emacs.d/lisp` directory.
+1. Download and copy `load-bash-alias.el` into `~/.emacs.d/lisp` directory.
 2. Add the following elisp code to your Emacs config:
 
 ``` elisp
